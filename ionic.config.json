@@ -1,0 +1,7 @@
+{
+  "name": "chachaching",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
