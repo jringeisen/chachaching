@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "chachaching",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
