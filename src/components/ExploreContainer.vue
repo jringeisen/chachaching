@@ -1,17 +1,25 @@
 <template>
   <div id="container">
-    <strong>{{ name }}</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <a @click.prevent="subscribe">Click to subscribe to sales topic</a>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
+import { FCM } from '@capacitor-community/fcm';
 
 export default defineComponent({
   name: 'ExploreContainer',
   props: {
     name: String
+  },
+
+  methods: {
+    subscribe () {
+      FCM.subscribeTo({ topic: "sales" })
+          .then(() => alert(`subscribed to topic`))
+          .catch((err) => console.log(err));
+    }
   }
 });
 </script>
